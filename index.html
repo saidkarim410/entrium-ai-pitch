@@ -63,9 +63,16 @@ p{margin:0}
 .top{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--paper) 88%,transparent);
   backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
 .top .wrap{display:flex;align-items:center;gap:18px;height:62px}
-.mark{font-family:var(--f-display);font-weight:700;font-size:20px;letter-spacing:-.02em;white-space:nowrap}
-.mark s{text-decoration:none;color:var(--accent)}
-.mark em{font-style:normal;color:var(--accent);font-size:.86em}
+/* ---------- Entrium wordmark: heart is the dot of the "i" ---------- */
+.elogo{font-family:"Segoe UI","Helvetica Neue",Arial,Helvetica,sans-serif;font-weight:800;
+  letter-spacing:-.021em;color:var(--ink);white-space:nowrap;line-height:1}
+.elogo .ilet{position:relative;display:inline-block}
+.elogo .ilet svg{position:absolute;left:50%;bottom:.63em;width:.50em;height:.50em;
+  transform:translateX(-50%);fill:var(--accent);display:block;overflow:visible}
+.elogo .um{color:var(--accent)}
+.mark{display:flex;align-items:baseline;gap:.5em;font-size:21px;white-space:nowrap}
+.mark .ai{font-family:var(--f-mono);font-size:.6em;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--mut);font-weight:400}
 .top nav{margin-left:auto;display:flex;gap:22px;font-size:14px;color:var(--mut)}
 .top nav a{text-decoration:none}
 .top nav a:hover{color:var(--accent-text)}
@@ -214,7 +221,9 @@ figure{margin:0}
 
 <header class="top">
   <div class="wrap">
-    <div class="mark">Entr<s>♥</s>um <em>AI</em></div>
+    <div class="mark">
+      <span class="elogo">Entr<span class="ilet">&#305;<svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 28C8 22.5 3 18 3 12.5 3 8.4 6.2 5 10.2 5c2.4 0 4.6 1.2 5.8 3.1C17.2 6.2 19.4 5 21.8 5 25.8 5 29 8.4 29 12.5 29 18 24 22.5 16 28z"/></svg></span><span class="um">um</span></span><span class="ai">AI</span>
+    </div>
     <nav>
       <a href="#problem">Зачем</a>
       <a href="#how">Как работает</a>
@@ -478,7 +487,10 @@ figure{margin:0}
       <a href="https://entrium-ai-v2.vercel.app" target="_blank" rel="noopener">entrium-ai-v2.vercel.app</a>
     </div>
     <div class="foot">
-      <span>Entrium AI · Сделано в Узбекистане</span>
+      <span style="display:inline-flex;align-items:baseline;gap:.5em">
+        <span class="elogo" style="font-size:15px">Entr<span class="ilet">&#305;<svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 28C8 22.5 3 18 3 12.5 3 8.4 6.2 5 10.2 5c2.4 0 4.6 1.2 5.8 3.1C17.2 6.2 19.4 5 21.8 5 25.8 5 29 8.4 29 12.5 29 18 24 22.5 16 28z"/></svg></span><span class="um">um</span></span>
+        <span>· Сделано в Узбекистане</span>
+      </span>
       <span>President AI Award · Category 04 — Education AI</span>
     </div>
   </div>
